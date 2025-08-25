@@ -1,7 +1,73 @@
+body.dark-mode  {
+    background: #181818 ;
+    color: #f1f1f1;
+}
+
+
+body.dark-mode .info h3{
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 24px;
+}   
+
+body.dark-mode .main {
+    background:url(pic/BlackBackground_3S.jpg);
+    color: white;
+}
+
+
+
+body.dark-mode #about{
+    background: url(pic/BlackBackground_3S.jpg);
+    color: white;
+}
+body.dark-mode.tab-link::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background: white; /*black*/
+    transition:  0.5s ease
+}
+
+body.dark-mode #contact{
+    background: #222;
+    color: white;
+}
+
+
+
+body.dark-mode a{
+    color: red;
+}
+
+body.dark-mode .tab-link {
+    color: blue;
+}
+
+body.dark-mode .about-col-1 p{
+    color: white;
+    font-size: 16px;
+    margin-top: 25px;
+    margin-left: 55px;
+}
+
+body.dark-mode .navbar .logo,
+body.dark-mode .image img {
+    border-color: #FFD700;
+    box-shadow: 0 0 20px #FFD700, 0 0 40px #FFA500;
+}
+
+
+
 *{
     margin: 0;
     padding: 0;
 }
+
 
 .main{
     width: 100%;
@@ -21,6 +87,8 @@
     align-items: center;
     justify-content: space-between;
 }
+
+
 
 .navbar .logo{
     width: 160px;
@@ -81,22 +149,6 @@ ul li a:hover{
     color: blue
 }
 
-.info a{
-    text-decoration: none;
-    color: red;
-    background:black; /* Gold background */
-    margin: 26px 0;
-    padding: 10px 18px;
-    border-radius: 10px;
-    display: inline-block;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.info a:hover{
-    background: orange;
-
-}
 
 
 .image {
@@ -153,7 +205,7 @@ ul li a:hover{
 
 #about{
     padding: 80px 0;
-    background: url(pic/bg_3.jpg);
+    background: url(pic/bg.png);
 }
 
 .row{
@@ -167,11 +219,12 @@ ul li a:hover{
 }
 
 .about-col-1 img{
-    width: 69%;
+    width: 65%;
     height: 50%;
     border-radius: 60%;
     margin-left: 100px;
-    margin-top: 15%;
+    margin-bottom: 10%;
+    
 
 }
 
@@ -183,7 +236,7 @@ ul li a:hover{
 .sub-title{
     font-size: 40px;
     color: rgb(236, 31, 31);
-    margin-bottom: 10px;
+    margin-top: -50px;
     font-weight: bolder;
 }
 
@@ -209,7 +262,7 @@ ul li a:hover{
     bottom: -5px;
     width: 0%;
     height: 3px;
-    background: black;
+    background: black; /*black*/
     transition:  0.5s ease
 }
 
@@ -263,92 +316,26 @@ ul li a:hover{
     margin-left: 55px;
 }
 
---CONTACT SECTION--
-.main_contact{
-    margin: 0;
-    padding: 0;
+
+
+
+
+/*add cv*/
+.about-col-1 a:hover {
+    background: red;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px red;
 }
 
-#contact{
-    padding: 80px 0;
-    background: lightblue;
-}
-    
-.contact-left h1{
-    color: red;
-    font-size: 40px;
-    font-weight: bolder;
-    margin-bottom: 20px;
-
-}
-
-.contact-left{
-    flex-basis: 35%;
-    margin-left: 5%;
-}
-
-.contact-right{
-    flex-basis: 60%;
-    margin-left: -1%;
-}
-
-.contact-left p{
+body.dark-mode .about-col-1 a {
+    background: #FFD700;
     color: black;
-    font-size: 16px;
-    margin-bottom: 10px;
+    box-shadow: 0 0 10px #FFD700;
 }
 
-.contact-left p span {
-    color: blue;
-    font-size: 16px;
-    margin-bottom: 10px;
+.about-col-1 a {
+    transition: all 0.3s ease-in-out;
 }
 
-.contact-left p i{
-    color: red;
-    margin-right: 10px;
-}
 
-.btn.btn2{
-    display: inline-block;
-    background: blue;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-top: 25px;
-}
-
-.btn.btn2:hover{
-    background: darkblue;
-}
-
-form input, form textarea {
-    border: 1px solid black;
-    border-radius: 6px;
-    padding: 15px;
-    width: 90%;
-    margin-top: 35px;
-}
-
-form input:focus, form textarea:focus {
-    border-color: blue;
-    outline: none;
-}
-
-form .btn.btn2{
-    display: inline-block;
-    background: blue;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-form .btn.btn2:hover{
-    background: darkblue;
-}
