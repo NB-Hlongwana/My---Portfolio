@@ -14,14 +14,15 @@
     <div class="main">
         <div class="navbar">
             <img src="pic/logo.png" class="logo">
-
             <ul>
                 <li><a href="#">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#projects">SKILLS</a></li>
                 <li><a href="#mywork">MY WORK</a></li>
                 <li><a href="#contact">CONTACT</a></li>
+                 <button id="mode-toggle" style="margin-left:20px; font-size:1.2em; cursor:pointer; background:none; border:none;">☀️</button>
             </ul>
+           
         </div>
 
         <div class="info">
@@ -30,8 +31,8 @@
             <p><h3>As a Web Designer and Developer with passion for creating visually 
                 <br>stunning websites. I bring ideas to life and help businesses do better 
                 <br>online, all built with focus and performance. I'm well experienced in 
-                <br>HTML, CSS, and JavaScript.</h3></p>
-                <a href="#">See More</a>
+                <br>HTML, CSS, and JavaScript.</h3></p><br><br><br><br>
+
         </div>
 
       <div class="icons">
@@ -45,9 +46,10 @@
        <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
 
        
-    <div class="image">
+     <div class="image">
         <img src="pic/profile.png" alt="profile">
     </div>
+  </div>
   </div>
 
  <!--About Me Section-->
@@ -58,9 +60,10 @@
                 <div class="about-col-1">
                     <img src="pic/Profile_3.jpg">
                     <p>Please find my CV attached below, which includes additional information about my background skills, experience in detail and achievement certificates.</p>
-                 <a href="#about">Download CV</a>
+                    <a href="doc/Resume_NBH.pdf" download>📄 Download CV</a>
+
                </div>
-            
+ 
 
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -86,6 +89,9 @@
 
                     <div class="tab-title">
                         <p class="tab-link active-link" onclick="opentab('education')">Education</p><br>
+                        <p class="tab-link" onclick="opentab('experience')">Experience</p><br>
+                        <p class="tab-link" onclick="opentab('certificate')">Certificates</p><br>
+                        
                     </div>
 
                    <div class="tab-content active-tab " id="education">
@@ -99,20 +105,20 @@
 
                     <div class="tab-content " id="certificate">
                         <ul>
-                            <br><br><br>
+                            <br>
                             <li><span>Artificial Intelligence certificate</span><br> Durban University of Technology<br>  May 2025 - June 2025<br>Fundamentals, Generative AI, Search Technology, <br>Responsible AI, Microsoft Copilot, and AI and <br>Accessibility</li><br><br>
                             <li><span>Linux certificate</span><br>  Durban University of Technology<br>  March 2023 - June 2023<br>Linux system administration skills</li><br><br>
-                            <li><span>Nemisa Mobile Digital Literacy </span><br>  Ikusasalentsha Secondary School<br>   July 2023 - August 2023<br>Network Connections, Mobile Productivity Applications,<br>Digital Opportunities, and Industrial Revolution </li><br><br>
-                            <li><span>Cisco Networking certificate</span><br>  Durban University of Technology<br>  March 2022 - June 2022<br>Cybersecurities</li>
+                            <li><span>Nemisa Mobile Digital Literacy </span><br>   Durban University of Technology<br>   July 2023 - August 2023<br>Network Connections, Mobile Productivity Applications,<br>Digital Opportunities, and Industrial Revolution </li><br><br>
+                            <li><span>Cisco Networking certificate</span><br>  Durban University of Technology<br>  March 2022 - June 2022<br>Cybersecurity</li>
                         </ul>
                     </div>
 
                     <div class="tab-content" id="experience">
                         <ul>
-                            <br><br><br>
+                            <br>
                             <li><span>Web Designer</span><br> Durban University of Technology<br> September 2022 - August 2023(Current)<br>Create websites using HTML, CSS, and JavaScript</li><br><br>
                             <li><span>Tutor</span><br>  Durban University of Technology<br>  August 2025 -  (Current)<br>Applications Development Project</li><br><br>
-                            <li><span>Lab Technician Assistant</span><br>  Durban University of Technology<br> August 2025 -  (Current)<br>Fixing Computers by installing cables, set up computers, <br>Troubleshooting and installation of Software</li>
+                            <li><span>Lab Technician Assistant</span><br>  Durban University of Technology<br> August 2025 -  (Part Time)<br>Fixing Computers by installing cables, set up computers, <br>Troubleshooting and installation of Software</li>
                         </ul>
                     </div>
 
@@ -122,36 +128,32 @@
     </div>
 </div>
 
+<script>
+        var tabLinks = document.getElementsByClassName('tab-link');
+        var tabContents = document.getElementsByClassName('tab-content');
 
-<!--Contact Section-->
- <div class="main_contact">
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p> I am currently seeking for internship opportunities. <br>If you have a question feel free to ask or say hello!<br> I will do my best to get back to you.</p>  <br>
-                    <p><i class="fas fa-phone"></i> (+27) 82 229 3936</p>
-                    <p><i class="fas fa-paper-plane"></i> nosisa03hlongwana@gmail.com</p><br>
-                  
-                    <p><i class="fab fa-github"></i> <span>https://github.com/NB-Hlongwana</span></p>
-                    <p><i class="fab fa-facebook"></i><span> https://www.facebook.com/nosierh.nosisarh</span></p>
-                    <p><i class="fab fa-linkedin"></i> <span>https://www.linkedin.com/in/nosisa-hlongwana-41b850377/</span></p><br>
-                      
-                </div>
-               
-                <div class="contact-right">
-                    <form>
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-                        <button type="submit" class="btn btn2">Send Message</button>
-                    </form>
-              </div>
-        </div>
-    </div>
- </div>
+        function opentab(tabName) {
+             for(tabLink of tabLinks) {
+                tabLink.classList.remove('active-link');
+             }
+                for(tabContent of tabContents) {
+                    tabContent.classList.remove('active-tab');
+                }
+                event.currentTarget.classList.add('active-link');
+                document.getElementById(tabName).classList.add('active-tab');
+        }
+
+        // Dark/Light mode toggle
+        const toggleBtn = document.getElementById('mode-toggle');
+        toggleBtn.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
+        });
+</script>
 
    
+
+
+
 </body>
 </html>
