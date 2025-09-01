@@ -1,7 +1,10 @@
 body.dark-mode  {
-    background: #181818 ;
+    background: url(pic/black_bg.jpg) ;
     color: #f1f1f1;
 }
+
+
+
 
 
 body.dark-mode .info h3{
@@ -12,7 +15,7 @@ body.dark-mode .info h3{
 }   
 
 body.dark-mode .main {
-    background:url(pic/BlackBackground_3S.jpg);
+    background:url(picBlackBackground_3S.jpg);
     color: white;
 }
 
@@ -34,14 +37,14 @@ body.dark-mode.tab-link::after{
 }
 
 body.dark-mode #contact{
-    background: #222;
+    background: url(pic/bg_contact_Dark.jpg);
     color: white;
 }
 
 
 
 body.dark-mode a{
-    color: red;
+    color: white;
 }
 
 body.dark-mode .tab-link {
@@ -71,7 +74,7 @@ body.dark-mode .image img {
 
 .main{
     width: 100%;
-    background: url(pic/bg.png);
+    background: url(pic/BG2.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -112,7 +115,7 @@ ul li{
 
 ul li a{
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 16px;
     font-weight: bold;
     margin-top: -35;
@@ -135,7 +138,7 @@ ul li a:hover{
 
 
 .info h3{
-    color: black;
+    color: white;
     font-size: 18px;
     letter-spacing: 1px;
     line-height: 24px;
@@ -197,6 +200,18 @@ ul li a:hover{
 }
 
 
+.footer{
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f1f1f1;
+    color: #333;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+
 <!--About Me Section-->
 .main_about{
     margin: 0;
@@ -205,7 +220,7 @@ ul li a:hover{
 
 #about{
     padding: 80px 0;
-    background: url(pic/bg.png);
+    background: url(pic/BlackBackground_3S.jpg);
 }
 
 .row{
@@ -220,12 +235,9 @@ ul li a:hover{
 
 .about-col-1 img{
     width: 65%;
-    height: 50%;
-    border-radius: 60%;
+    height: 48%;
     margin-left: 100px;
-    margin-bottom: 10%;
-    
-
+    margin-top: 10%;
 }
 
 .about-col-2{
@@ -246,7 +258,7 @@ ul li a:hover{
 }
 
 
-.tab-link{
+.tab-link {
     margin-right: 50px;
     font-size: 25px;
     font-weight: 500;
@@ -263,8 +275,9 @@ ul li a:hover{
     width: 0%;
     height: 3px;
     background: black; /*black*/
-    transition:  0.5s ease
+  transition: 0.5s ease;
 }
+
 
 .tab-link.active-link::after{
     width: 50%;
@@ -273,6 +286,7 @@ ul li a:hover{
 .tab-content ul li{
     list-style: none;
     margin: -13px ;
+    color: white;
 
 }
 
@@ -297,7 +311,7 @@ ul li a:hover{
 .about-col-1 a{
     text-decoration: none;
     color: red;
-    background:black; /* Gold background */
+    background: blue; /* Gold background */
     margin: 26px 0;
     padding: 10px 18px;
     border-radius: 10px;
@@ -310,17 +324,25 @@ ul li a:hover{
 }
 
 .about-col-1 p{
-    color: black;
+    color: white;
     font-size: 16px;
     margin-top: 25px;
     margin-left: 55px;
 }
 
 
+.about-col-2  p{
+    color: white;
+    font-size: 16px;
+    margin-top: 25px;
+    margin-left: 1px;
+}
 
 
 
-/*add cv*/
+
+
+
 .about-col-1 a:hover {
     background: red;
     color: white;
@@ -330,7 +352,7 @@ ul li a:hover{
 
 body.dark-mode .about-col-1 a {
     background: #FFD700;
-    color: black;
+    color: white;
     box-shadow: 0 0 10px #FFD700;
 }
 
@@ -339,3 +361,120 @@ body.dark-mode .about-col-1 a {
 }
 
 
+
+.footer{
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f1f1f1;
+    color: #333;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+--CONTACT SECTION--
+.main_contact{
+    margin: 0;
+    padding: 0;
+}
+
+#contact{
+    padding: 80px 0;
+    background: url(pic/1.jpg);
+}
+    
+.contact-left h1{
+    color: red;
+    font-size: 40px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    
+}
+
+.contact-left{
+    flex-basis: 35%;
+    margin-left: 5%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+    margin-left: -1%;
+}
+
+.contact-left p{
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact-left p span {
+    color: blue;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact-left p i{
+    color: red;
+    margin-right: 10px;
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 25px;
+}
+
+.btn.btn2:hover{
+    background: darkblue;
+}
+
+form input, form textarea {
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 10px;
+    width: 90%;
+    margin-top: 20px;
+}
+
+form input:focus, form textarea:focus {
+    border-color: blue;
+    outline: none;
+}
+
+form .btn.btn2{
+    display: inline-block;
+    background: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form .btn.btn2:hover{
+    background: darkblue;
+}
+
+
+.contact-col-2{
+    margin-left: 50px;
+}
+
+.footer{
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f1f1f1;
+    color: #333;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}

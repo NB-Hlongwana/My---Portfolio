@@ -1,67 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">     
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
 
-    <!-- cdn icon link-->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
+
 <body>
-  
-    <div class="main">
-        <div class="navbar">
-            <img src="pic/logo.png" class="logo">
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#projects">SKILLS</a></li>
-                <li><a href="#mywork">MY WORK</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-                 <button id="mode-toggle" style="margin-left:20px; font-size:1.2em; cursor:pointer; background:none; border:none;">☀️</button>
-            </ul>
-           
-        </div>
+  <div class="main">
+    <div class="navbar">
+      <img src="pic/logo.png" class="logo" alt="Logo">
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#projects">SKILLS</a></li>
+        <li><a href="#mywork">MY WORK</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <button id="mode-toggle"
+                style="margin-left:20px; font-size:1.2em; cursor:pointer; background:none; border:none;"
+                aria-label="Toggle dark mode">☀️</button>
+      </ul>
+    </div>
 
-        <div class="info">
-            <h3>Hello, I'm <span>Nosisa Bleseth Hlongwana!</span></h3>
-            <h1><span>W</span>EB <span>D</span>ESIGNER</h1>
-            <p><h3>As a Web Designer and Developer with passion for creating visually 
-                <br>stunning websites. I bring ideas to life and help businesses do better 
-                <br>online, all built with focus and performance. I'm well experienced in 
-                <br>HTML, CSS, and JavaScript.</h3></p><br><br><br><br>
+    <div class="info">
+      <h3>Hello, I'm <span>Nosisa Bleseth Hlongwana!</span></h3>
+      <h1><span>W</span>EB <span>D</span>ESIGNER</h1>
+      <h3>
+        As a Web Designer and Developer with passion for creating visually<br>
+        stunning websites. I bring ideas to life and help businesses do better<br>
+        online, all built with focus and performance. I'm well experienced in<br>
+        HTML, CSS, and JavaScript.
+      </h3><br><br><br>
+    </div>
 
-        </div>
-
-      <div class="icons">
-            <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-github"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>  
-       
-      </div>
-
-       <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
-
-       
-     <div class="image">
-        <img src="pic/profile.png" alt="profile">
+    <div class="icons" aria-label="Social links">
+      <a href="#" aria-label="WhatsApp"><ion-icon name="logo-whatsapp"></ion-icon></a>
+      <a href="#" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
+      <a href="#" aria-label="GitHub"><ion-icon name="logo-github"></ion-icon></a>
+      <a href="#" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
     </div>
   </div>
+        <div class="footer">
+      <p></p>
+    </div>  
   </div>
 
- <!--About Me Section-->
+<!--About Me Section-->
  <div class="main_about">
     <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="pic/Profile_3.jpg">
+                    <img src="pic/profile.png"><br><br><br><br>
                     <p>Please find my CV attached below, which includes additional information about my background skills, experience in detail and achievement certificates.</p>
                     <a href="doc/Resume_NBH.pdf" download>📄 Download CV</a>
-
+  
                </div>
  
 
@@ -88,13 +93,13 @@
                 
 
                     <div class="tab-title">
-                        <p class="tab-link active-link" onclick="opentab('education')">Education</p><br>
-                        <p class="tab-link" onclick="opentab('experience')">Experience</p><br>
-                        <p class="tab-link" onclick="opentab('certificate')">Certificates</p><br>
-                        
+                        <h2 class="tab-link active-link" onclick="opentab('education')">Education</h2><br>
+                        <h2 class="tab-link" onclick="opentab('experience')">Experience</h2><br>
+                        <h2 class="tab-link" onclick="opentab('certificate')">Certificates</h2><br>
+
                     </div>
 
-                   <div class="tab-content active-tab " id="education">
+                   <div class="tab-content active-tab" id="education">
                         <ul>
                             <br>
                             <li><span>Diploma in ICT - Applications Development</span><br> Durban University of Technology<br>  January 2023 - December 2025<br>NQF Level 6 (Final Student)</li><br><br>
@@ -103,7 +108,7 @@
                         </ul>
                     </div>
 
-                    <div class="tab-content " id="certificate">
+                    <div class="tab-content" id="certificate">
                         <ul>
                             <br>
                             <li><span>Artificial Intelligence certificate</span><br> Durban University of Technology<br>  May 2025 - June 2025<br>Fundamentals, Generative AI, Search Technology, <br>Responsible AI, Microsoft Copilot, and AI and <br>Accessibility</li><br><br>
@@ -126,9 +131,61 @@
             </div>
         </div>
     </div>
+        <div class="footer">
+      <p></p>
+    </div>
+  </div>
+
 </div>
 
-<script>
+
+  <!-- Contact -->
+  <div class="main_contact" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+            <p> I am currently seeking for internship opportunities. <br>
+                If you have a question feel free to ask or say hello!<br> 
+                I will do my best to get back to you.</p>  <br>
+          <p><i class="fas fa-phone"></i> (+27) 82 229 3936</p>
+          <p><i class="fas fa-paper-plane"></i> nosisa03hlongwana@gmail.com</p><br>
+
+
+          <p><i class="fab fa-github"></i>
+            <span><a href="https://github.com/NB-Hlongwana" target="_blank" rel="noopener">https://github.com/NB-Hlongwana</a></span>
+          </p>
+          <p><i class="fab fa-facebook"></i>
+            <span><a href="https://www.facebook.com/nosierh.nosisarh" target="_blank" rel="noopener">https://www.facebook.com/nosierh.nosisarh</a></span>
+          </p>
+          <p><i class="fab fa-linkedin"></i>
+            <span><a href="https://www.linkedin.com/in/nosisa-hlongwana-41b850377/" target="_blank" rel="noopener">https://www.linkedin.com/in/nosisa-hlongwana-41b850377/</a></span>
+          </p><br>
+
+          <p><i class="fas fa-map-marker-alt"></i>
+            82 Diakonia Avenue, Anchor House, Durban, 4091
+          </p>
+        </div>
+
+        <div class="contact-right">
+          <!-- IDs that JS expects -->
+          <form id="contactForm" autocomplete="on" novalidate>
+            <input id="name" type="text" name="Name" placeholder="Your Name" required>
+            <input id="email" type="email" name="Email" placeholder="Your Email" required>
+            <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn2">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <br><br><br><br><br><br>
+    <div class="footer">
+      <p>Copyright &copy; 2025 - Designed by Nosisa Bleseth Hlongwana</p>
+    </div>
+  </div>
+
+ <script>
         var tabLinks = document.getElementsByClassName('tab-link');
         var tabContents = document.getElementsByClassName('tab-content');
 
@@ -151,9 +208,52 @@
         });
 </script>
 
-   
+  <script>
+    // ===== Firebase v8 =====
+    const firebaseConfig = {
+      apiKey: "AIzaSyCL5BjMgWH5tH_aJUuV_Ok6RWit7OsOrp8",
+      authDomain: "newproject-33abe.firebaseapp.com",
+      databaseURL: "https://newproject-33abe-default-rtdb.firebaseio.com",
+      projectId: "newproject-33abe",
+      storageBucket: "newproject-33abe.appspot.com",
+      messagingSenderId: "820098979741",
+      appId: "1:820098979741:web:50c09d14227a7624d70174",
+      measurementId: "G-HRNGPFV1W2"
+    };
 
+    // Initialize Firebase (v8 namespace API)
+    firebase.initializeApp(firebaseConfig);
 
+    // Realtime Database reference for contact messages
+    const contactFormDB = firebase.database().ref("contactForm");
 
+    // Handle form submit
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      // Basic email validation
+      if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+
+      contactFormDB.push({
+        name,
+        email,
+        message,
+        timestamp: new Date().toISOString()
+      }).then(() => {
+        alert("Message sent successfully!");
+        document.getElementById("contactForm").reset();
+      }).catch(err => {
+        console.error(err);
+        alert("Sorry, something went wrong. Please try again later.");
+      });
+    });
+  </script>
 </body>
 </html>
