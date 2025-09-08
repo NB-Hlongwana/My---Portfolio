@@ -7,6 +7,10 @@
 
   <link rel="stylesheet" href="style.css">
 
+    
+
+
+
   <!-- Font Awesome -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -25,8 +29,8 @@
       <ul>
         <li><a href="#">HOME</a></li>
         <li><a href="#about">ABOUT</a></li>
-        <li><a href="#projects">SKILLS</a></li>
-        <li><a href="#mywork">MY WORK</a></li>
+  <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
         <li><a href="#contact">CONTACT</a></li>
         <button id="mode-toggle"
                 style="margin-left:20px; font-size:1.2em; cursor:pointer; background:none; border:none;"
@@ -35,7 +39,7 @@
     </div>
 
     <div class="info">
-      <h3>Hello, I'm <span>Nosisa Bleseth Hlongwana!</span></h3>
+      <h3>Hello, I'm <span>Nosisa Bleseth Hlongwana!</span></h3><br>
       <h1><span>W</span>EB <span>D</span>ESIGNER</h1>
       <h3>
         As a Web Designer and Developer with passion for creating visually<br>
@@ -58,15 +62,16 @@
   </div>
 
 <!--About Me Section-->
+
  <div class="main_about">
     <div id="about">
+ 
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
                     <img src="pic/profile.png"><br><br><br><br>
                     <p>Please find my CV attached below, which includes additional information about my background skills, experience in detail and achievement certificates.</p>
-                    <a href="doc/Resume_NBH.pdf" download>📄 Download CV</a>
-  
+                    <a href="" download>📄 Download CV</a>
                </div>
  
 
@@ -135,16 +140,130 @@
       <p></p>
     </div>
   </div>
+<div>
 
 </div>
 
 
+
+<!--Skills section-->
+  <div class="main_skills" id="skills">
+    <h1>My Skills</h1>
+    <div class="skill">
+       <p><h3>HTML</h3></p>
+       <h4>90%</h4>
+      <span class="bar"><span class="percentage" style="width: 90%;"></span></span><br>
+      <p><h3>CSS</h3></p>
+      <h4>85%</h4>
+      <span class="bar"><span class="percentage" style="width: 85%;"></span></span><br>
+      <p><h3>JavaScript</h3></p>
+      <h4>55%</h4>
+      <span class="bar"><span class="percentage" style="width: 55%;"></span></span><br>    
+      <p><h3>SQL</h3></p>
+      <h4>77%</h4>
+      <span class="bar"><span class="percentage" style="width: 77%;"></span></span><br>
+      <p><h3>C#</h3></p>
+      <h4>45%</h4>
+      <span class="bar"><span class="percentage" style="width: 45%;"></span></span><br>
+      
+
+      </div>
+      
+<br><br><br>
+
+        <div class="footer">
+      <p></p>
+    </div>
+  </div>
+ 
+  </div>
+
+
+    <!-- Projects Section -->
+      <div class="main_projects">
+          <div id="portfolio">
+    <section class="projects-section">
+      <h2>My GitHub Projects</h2>
+      <input type="text" id="filterInput" placeholder="Filter projects..." />
+      <div id="projectsContainer" class="projects-grid"></div>
+      <br><br><br>
+      
+ </div>
+        <div class="footer">
+      <p></p>
+    </section>
+    
+    </div>
+      </div>
+
+<script>
+  // GitHub Projects Fetch & Filter
+  const username = "NB-Hlongwana";
+  const projectsContainer = document.getElementById("projectsContainer");
+  const filterInput = document.getElementById("filterInput");
+  let allRepos = [];
+
+  async function fetchProjects() {
+    try {
+      const response = await fetch(`https://api.github.com/users/${username}/repos`);
+      const repos = await response.json();
+      allRepos = repos;
+      displayProjects(repos);
+    } catch (error) {
+      projectsContainer.innerHTML = '<p style="color:red">Could not load projects. Please try again later.</p>';
+    }
+  }
+
+  function displayProjects(repos) {
+    projectsContainer.innerHTML = "";
+    if (!repos.length) {
+      projectsContainer.innerHTML = '<p>No projects found.</p>';
+      return;
+    }
+    repos.forEach(repo => {
+      const card = document.createElement("div");
+      card.classList.add("project-card");
+      const liveDemoUrl = `https://${username}.github.io/${repo.name}/`;
+      card.innerHTML = `
+        <h3>${repo.name}</h3>
+        <p>${repo.description ? repo.description : "No description"}</p>
+        ${repo.language ? `<span class='language-badge'>${repo.language}</span>` : ""}
+        <div class="project-links">
+          <a href="${repo.html_url}" target="_blank">View Code</a>
+          <a href="${liveDemoUrl}" target="_blank"></a>
+        </div>
+
+
+         
+      `;
+      projectsContainer.appendChild(card);
+    });
+  }
+
+  filterInput.addEventListener("input", () => {
+    const searchTerm = filterInput.value.toLowerCase();
+    const filtered = allRepos.filter(repo =>
+      repo.name.toLowerCase().includes(searchTerm) ||
+      (repo.language && repo.language.toLowerCase().includes(searchTerm))
+    );
+    displayProjects(filtered);
+  });
+
+  fetchProjects();
+</script>
+ 
+
+
+
   <!-- Contact -->
   <div class="main_contact" id="contact">
+
+       
+
     <div class="container">
       <div class="row">
         <div class="contact-left">
-          <h1 class="sub-title">Contact Me</h1>
+          <h1 class="sub-title-C">Contact Me</h1>
             <p> I am currently seeking for internship opportunities. <br>
                 If you have a question feel free to ask or say hello!<br> 
                 I will do my best to get back to you.</p>  <br>
@@ -185,6 +304,17 @@
     </div>
   </div>
 
+
+
+
+
+  <!-- Removed duplicate/unused projects section for clarity -->
+
+
+
+
+
+  
  <script>
         var tabLinks = document.getElementsByClassName('tab-link');
         var tabContents = document.getElementsByClassName('tab-content');
@@ -207,6 +337,9 @@
             toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
         });
 </script>
+
+
+
 
   <script>
     // ===== Firebase v8 =====
@@ -255,5 +388,8 @@
       });
     });
   </script>
+
+
+
 </body>
 </html>
