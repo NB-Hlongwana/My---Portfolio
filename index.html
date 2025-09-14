@@ -6,6 +6,7 @@
   <title>My Portfolio</title>
 
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dark-mode.css">
 
     
 
@@ -69,7 +70,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="pic/profile.png"><br><br><br><br>
+                    <img src="pic/PRO NEW.jpeg"><br><br><br><br>
                     <p>Please find my CV attached below, which includes additional information about my background skills, experience in detail and achievement certificates.</p>
                     <a href="doc/Resume_NBH.pdf" download>📄 Download CV</a>
                </div>
@@ -139,10 +140,7 @@
         <div class="footer">
       <p></p>
     </div>
-  </div>
-<div>
 
-</div>
 
 
 
@@ -185,16 +183,14 @@
     <section class="projects-section">
       <h2>My GitHub Projects</h2>
       <input type="text" id="filterInput" placeholder="Filter projects..." />
+
       <div id="projectsContainer" class="projects-grid"></div>
       <br><br><br>
-      
- </div>
-        <div class="footer">
-      <p></p>
     </section>
-    
+    <div class="footer">
+      <p></p>
     </div>
-      </div>
+  </div>
 
 <script>
   // GitHub Projects Fetch & Filter
@@ -229,12 +225,9 @@
         <p>${repo.description ? repo.description : "No description"}</p>
         ${repo.language ? `<span class='language-badge'>${repo.language}</span>` : ""}
         <div class="project-links">
-          <a href="${repo.html_url}" target="_blank">View Code</a>
-          <a href="${liveDemoUrl}" target="_blank"></a>
+          <a href="${repo.html_url}" target="_blank" rel="noopener">View Code</a>
+          <a href="${liveDemoUrl}" target="_blank" rel="noopener">Live Demo</a>
         </div>
-
-
-         
       `;
       projectsContainer.appendChild(card);
     });
@@ -282,7 +275,7 @@
           </p><br>
 
           <p><i class="fas fa-map-marker-alt"></i>
-            82 Diakonia Avenue, Anchor House, Durban, 4091
+            South Africa, KwaZulu-Natal, Durban, 4091
           </p>
         </div>
 
@@ -309,6 +302,7 @@
 
 
   <!-- Removed duplicate/unused projects section for clarity -->
+
 
 
 

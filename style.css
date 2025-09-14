@@ -4,9 +4,6 @@ body.dark-mode  {
 }
 
 
-
-
-
 body.dark-mode .info h3{
     color: white;
     font-size: 18px;
@@ -15,14 +12,18 @@ body.dark-mode .info h3{
 }   
 
 body.dark-mode .main {
-    background:url(picBlackBackground_3S.jpg);
+    background: url(pic/black_bg.jpg);
+    color: white;
+}
+
+body.dark-mode .main_projects {
+    background: black;
     color: white;
 }
 
 
-
 body.dark-mode #about{
-    background: url(pic/BlackBackground_3S.jpg);
+    background: black;
     color: white;
 }
 body.dark-mode.tab-link::after{
@@ -37,8 +38,13 @@ body.dark-mode.tab-link::after{
 }
 
 body.dark-mode #contact{
-    background: url(pic/bg_contact_Dark.jpg);
-    color: white;
+    background: url(pic/1.jpg);
+}
+
+body.dark-mode .contact-left p span{
+    color: blue;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 
@@ -164,8 +170,8 @@ ul li a:hover{
 }
 
 .image img{
-    width: 300px;
-    height: 400px;
+    width: 200px;
+    height: 150px;
     border: 500%;
     margin-top: -450px;
     object-fit: cover;
@@ -306,7 +312,7 @@ ul li a:hover{
 
 #about{
     padding: 80px 0;
-    background: url(pic/BlackBackground_3S.jpg);
+    background: url(pic/New.bg_2.jpg);
 }
 
 .row{
@@ -361,7 +367,7 @@ ul li a:hover{
     bottom: -5px;
     width: 0%;
     height: 3px;
-    background: black; /*black*/
+    background: red; /*black*/
   transition: 0.5s ease;
 }
 
@@ -398,14 +404,14 @@ ul li a:hover{
 .about-col-1 a{
     text-decoration: none;
     color: red;
-    background: blue; /* Gold background */
+    background: black; /* Gold background */
     margin: 26px 0;
     padding: 10px 18px;
     border-radius: 10px;
     display: inline-block;
     font-weight: bold;
     transition: 0.3s;
-    margin-left: 170px;
+    margin-left: 150px;
     margin-top: 35px;
     font-size: 15px;
 }
@@ -437,11 +443,7 @@ ul li a:hover{
     box-shadow: 0 0 10px red;
 }
 
-body.dark-mode .about-col-1 a {
-    background: #FFD700;
-    color: white;
-    box-shadow: 0 0 10px #FFD700;
-}
+
 
 .about-col-1 a {
     transition: all 0.3s ease-in-out;
@@ -468,7 +470,7 @@ body.dark-mode .about-col-1 a {
 
 #contact{
     padding: 80px 0;
-    background: url(pic/1.jpg);
+    background: url(pic/New.bg_2.jpg);
 }
     
 .contact-left h1{
@@ -476,7 +478,7 @@ body.dark-mode .about-col-1 a {
     font-size: 40px;
     font-weight: bolder;
     margin-bottom: 20px;
-    margin-left: 75px;
+    margin-right: -665px;
 }
 
 
@@ -488,6 +490,7 @@ body.dark-mode .about-col-1 a {
 .contact-right{
     flex-basis: 60%;
     margin-left: -1%;
+    margin-top: 4%;
 }
 
 .contact-left p{
@@ -496,10 +499,27 @@ body.dark-mode .about-col-1 a {
     margin-bottom: 10px;
 }
 
-.contact-left p span {
-    color: blue;
+
+
+body.dark-mode .contact-left p span {
+  
     font-size: 16px;
     margin-bottom: 10px;
+    font-weight: bold;
+    background: #222;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background-color: blue;
+}
+
+.contact-left p span {
+    color: #FFD700;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    background: white;
+    padding: 2px 6px;
+    border-radius: 4px;
 }
 
 .contact-left p i{
@@ -518,6 +538,8 @@ body.dark-mode .about-col-1 a {
     transition: background 0.3s;
     margin-top: 25px;
 }
+
+
 
 .btn.btn2:hover{
     background: darkblue;
@@ -636,6 +658,9 @@ h3{
     position: relative;
     overflow: hidden;
 }
+
+
+
 
 h4{
     margin-bottom: -15;
